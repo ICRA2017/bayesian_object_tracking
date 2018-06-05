@@ -13,6 +13,11 @@ RUN apt-get update && apt-get install -y \
 	build-essential software-properties-common \
 	&& rm -rf /var/lib/apt/lists	
 
+RUN apt-get update && apt-get install -y \
+	ros-indigo-cv-bridge ros-indigo-image-transport \
+	ros-indigo-interactive-markers ros-indigo-cmake-modules \
+	&& rm -rf /var/lib/apt/lists	
+
 RUN mkdir -p projects/tracking/src \
 	&& cd projects/tracking/src \
 	&& git clone https://github.com/filtering-library/fl.git \
