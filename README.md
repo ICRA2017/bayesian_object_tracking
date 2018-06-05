@@ -1,4 +1,4 @@
-
+[![Docker Build Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=icra2017&repository=bayesian_object_tracking)](https://hub.docker.com/r/icra2017/bayesian_object_tracking/builds/) 
 
 * [Depth Based Object and Robot Tracking](#depth-based-object-and-robot-tracking)
   * [Requirements](#requirements)
@@ -184,4 +184,9 @@ For additional details about the robot tracking, please checkout the
  year = {2017},
  month_numeric = {4}
 }
+```
+
+## Run in Docker
+```
+$ docker run -it --rm icra2017/bayesian_object_tracking /bin/bash
 ```
