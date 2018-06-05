@@ -188,5 +188,8 @@ For additional details about the robot tracking, please checkout the
 
 ## Run in Docker
 ```
-$ docker run -it --rm icra2017/bayesian_object_tracking /bin/bash
+$ docker run -it --rm -e DISPLAY=150.128.100.192:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix:rw 7797255 /bin/bash
+root@192ee383f1af:/# cd projects/tracking/
+root@192ee383f1af:/projects/tracking# source devel/setup.bash
+root@192ee383f1af:/projects/tracking# roslaunch dbot_example launch_example_cpu.launch
 ```
