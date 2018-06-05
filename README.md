@@ -187,6 +187,7 @@ For additional details about the robot tracking, please checkout the
 ```
 
 ## Run in Docker
+(rviz not working)
 ```
 $ docker run -it --rm -e DISPLAY=150.128.100.192:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix:rw 7797255 /bin/bash
 root@192ee383f1af:/# cd projects/tracking/
