@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
 	ros-indigo-cv-bridge ros-indigo-image-transport \
 	ros-indigo-interactive-markers ros-indigo-cmake-modules \
+	libyaml-cpp-dev \
 	&& rm -rf /var/lib/apt/lists	
 
 RUN mkdir -p projects/tracking/src \
@@ -28,3 +29,12 @@ RUN mkdir -p projects/tracking/src \
 RUN source /ros_entrypoint.sh \
 	&& cd projects/tracking \
 	&& catkin_make -DCMAKE_BUILD_TYPE=Release -DDBOT_BUILD_GPU=Off
+
+RUN cd projects/tracking/src \
+	&& git clone https://git-amd.tuebingen.mpg.de/open-source/dbot_getting_started.git
+
+RUN source /ros_entrypoint.sh \
+	&& cd projects/tracking \
+	&& catkin_make -DCMAKE_BUILD_TYPE=Release -DDBOT_BUILD_GPU=Off
+
+CMD ["roslaunch", "dbot_example", "launch_example_cpu.launch"]
