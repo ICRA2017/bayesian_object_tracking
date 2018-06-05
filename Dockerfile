@@ -16,9 +16,9 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p projects/tracking/src \
 	&& cd projects/tracking/src \
 	&& git clone https://github.com/filtering-library/fl.git \
-	&& git clone https://github.com/bayesian-object-tracking/dbot.git \
-	&& git clone https://github.com/bayesian-object-tracking/dbot_ros_msgs.git \
-	&& git clone https://github.com/bayesian-object-tracking/dbot_ros.git
+	&& git clone https://github.com/ICRA2017/dbot.git \
+	&& git clone https://github.com/ICRA2017/dbot_ros_msgs.git \
+	&& git clone https://github.com/ICRA2017/dbot_ros.git
 	
 RUN source /ros_entrypoint.sh \
 	&& cd projects/tracking \
