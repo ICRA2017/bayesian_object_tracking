@@ -193,9 +193,8 @@ Tested in Ubuntu 14.04.5, Docker version 18.03.1-ce, nvidia-docker 2.0, GeForce 
 Allow X-server connections in host.
 
 ```
-$ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --runtime=nvidia  bayesian_object_tracking bash
+$ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --runtime=nvidia  icra2017/bayesian_object_tracking bash
 root@655599d8c67e:/# source /opt/ros/indigo/setup.bash
-root@655599d8c67e:/# cd projects/tracking/
-root@655599d8c67e:/projects/tracking# source devel/setup.bash
-root@655599d8c67e:/projects/tracking# roslaunch dbot_example launch_example_cpu.launch
+root@655599d8c67e:/# source /projects/tracking/devel/setup.bash
+root@655599d8c67e:/# roslaunch dbot_example launch_example_cpu.launch
 ```
